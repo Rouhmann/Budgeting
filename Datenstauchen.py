@@ -7,8 +7,8 @@ import pandas as pd
 df = pd.read_csv("Umsaetze.csv", sep=";")
 
 df.rename(columns={"Name Zahlungsbeteiligter": "Zahlungsbeteiligter", "Saldo nach Buchung": "Saldo"}, inplace = True)
-#Dropping sensitive and non-useful data
 
+#Dropping sensitive and non-useful data
 col_drop = ["IBAN Auftragskonto",  "Bezeichnung Auftragskonto", "BIC Auftragskonto", "IBAN Zahlungsbeteiligter", "Bankname Auftragskonto", "Valutadatum",
 "BIC (SWIFT-Code) Zahlungsbeteiligter", "Bemerkung", "Kategorie","Steuerrelevant", "Glaeubiger ID", "Mandatsreferenz"]
 for col in col_drop:
